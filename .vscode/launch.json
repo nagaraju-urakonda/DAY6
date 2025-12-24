@@ -1,0 +1,42 @@
+function calculateBMI() {
+    var weight = Number(document.getElementById("weight").value);
+    var heightCm = Number(document.getElementById("height").value);
+    var heightM = heightCm / 100;
+
+    if (!weight || !heightCm) {
+        alert("Please enter valid height and weight");
+        return;
+    }
+
+    var bmi = (weight / (heightM * heightM)).toFixed(2);
+    document.getElementById("bmiValue").innerHTML = "Your BMI: " + bmi;
+
+    var result = document.getElementById("bmiResult");
+    var image = document.getElementById("foodImage");
+    var text = document.getElementById("foodText");
+
+    if (bmi < 18.5) {
+        result.innerHTML = "Underweight";
+        result.style.background = "#f6e58d";
+        image.src = "underweight.jpg";
+        text.innerHTML = "You need to eat healthy high-calorie foods 🍌🥜🥛";
+    } 
+    else if (bmi <= 24.9) {
+        result.innerHTML = "Normal Weight";
+        result.style.background = "#6ab04c";
+        image.src = "normal.jpg";
+        text.innerHTML = "Maintain a balanced diet 🥗🍎🍚";
+    } 
+    else if (bmi <= 29.9) {
+        result.innerHTML = "Overweight";
+        result.style.background = "#f0932b";
+        image.src = "overweight.jpg";
+        text.innerHTML = "Prefer low-calorie healthy foods 🥦🥒";
+    } 
+    else {
+        result.innerHTML = "Obesity";
+        result.style.background = "#eb4d4b";
+        image.src = "obese.jpg";
+        text.innerHTML = "Strict diet control recommended ⚠️🥬";
+    }
+}

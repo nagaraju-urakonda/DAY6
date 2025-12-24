@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animated BMI Calculator</title>
+    <link rel="stylesheet" href="bmi.css">
+    <script src="bmi.js" defer></script>
+</head>
+<body>
+
+<h1 class="main-title">BMI Calculator with Food Suggestions</h1>
+
+<div class="container">
+    <div class="image-marquee">
+    <div class="image-track">
+        <img src="uweight.avif">
+        <img src="uweight2.jpg">
+        <img src="nweight1.jpg">
+        <img src="nweight2.jpg">
+        <img src="oweight1.webp">
+        <img src="oweight2.jpg">
+    </div>
+</div>
+
+    <h2>BMI Calculator</h2>
+
+    <input type="number" id="weight" placeholder="Enter weight (kg)">
+    <input type="number" id="height" placeholder="Enter height (cm)">
+
+    <button onclick="calculateBMI()">Calculate BMI</button>
+
+    <h3 id="bmiValue"></h3>
+    <div id="bmiResult" class="result-box"></div>
+
+    <div class="food-box">
+        <img id="foodImage" src="" alt="Food Suggestion">
+        <p id="foodText"></p>
+    </div>
+</div>
+
+<marquee>Eat Healthy 🥗 | Stay Fit 💪 | Exercise Daily 🏃‍♂️</marquee>
+
+</body>
+</html>
